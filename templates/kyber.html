@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML-KEM (Kyber) Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🔐 ML-KEM (Kyber) Demonstration</h1>
+
+    <hr>
+
+    <h2>Algorithm Information</h2>
+
+    <p><b>Algorithm:</b> ML-KEM-512</p>
+    <p><b>Purpose:</b> Quantum-Safe Key Exchange</p>
+
+    <hr>
+
+    <h2>Demo Results</h2>
+
+    <div class="card">
+
+        <p><b>Public Key Size:</b> {{ public_key_size }} bytes</p>
+
+        <p><b>Ciphertext Size:</b> {{ ciphertext_size }} bytes</p>
+<p><b>Key Generation Time:</b> {{ keygen_time }} sec</p>
+
+<p><b>Encapsulation Time:</b> {{ encap_time }} sec</p>
+
+<p><b>Decapsulation Time:</b> {{ decap_time }} sec</p>
+
+        <p><b>Alice Secret:</b></p>
+        <textarea rows="4" cols="120" readonly>{{ alice_secret }}</textarea>
+
+        <p><b>Bob Secret:</b></p>
+        <textarea rows="4" cols="120" readonly>{{ bob_secret }}</textarea>
+
+        <h3>{{ result }}</h3>
+
+    </div>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>

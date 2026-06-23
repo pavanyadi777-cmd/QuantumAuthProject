@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Message Exchange</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🔒 Secure Message Exchange</h1>
+
+    <form method="POST">
+
+        <p><b>Alice Message:</b></p>
+
+        <textarea
+            name="message"
+            rows="5"
+            cols="80"
+            required></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Generate Secure Communication
+        </button>
+
+    </form>
+
+    {% if submitted_message %}
+
+    <hr>
+
+    <h2>Alice Message</h2>
+    <p>{{ submitted_message }}</p>
+
+    <h2>ML-KEM Key Exchange</h2>
+
+    <p><b>Public Key:</b></p>
+    <textarea rows="3" cols="100" readonly>{{ public_key }}</textarea>
+
+    <p><b>Ciphertext:</b></p>
+    <textarea rows="3" cols="100" readonly>{{ ciphertext }}</textarea>
+
+    <p><b>Shared Secret:</b></p>
+    <textarea rows="3" cols="100" readonly>{{ shared_secret }}</textarea>
+
+    <h2>Encrypted Message</h2>
+    <textarea rows="3" cols="100" readonly>{{ encrypted_message }}</textarea>
+
+    <h2>Decrypted Message</h2>
+    <p>{{ decrypted_message }}</p>
+
+    <h2>ML-DSA Signature</h2>
+    <p><b>Signature Size:</b> {{ signature_size }} bytes</p>
+
+    <textarea rows="4" cols="100" readonly>{{ signature }}</textarea>
+
+    <h3>{{ verification_result }}</h3>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>

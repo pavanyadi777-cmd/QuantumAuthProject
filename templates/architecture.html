@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Architecture</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏗️ System Architecture</h1>
+
+    <hr>
+
+    <div class="card">
+
+<pre>
+
+      User
+        |
+        v
+ +------------------+
+ |  ML-DSA Signing  |
+ +------------------+
+        |
+        v
+ +------------------+
+ | Digital Signature|
+ +------------------+
+        |
+        v
+ +------------------+
+ | ML-KEM Key Exchange |
+ +------------------+
+        |
+        v
+ +------------------+
+ | Encrypted Channel |
+ +------------------+
+        |
+        v
+ +------------------+
+ | Verification &
+ | Tampering Check |
+ +------------------+
+        |
+        v
+
+ Secure Authentication
+
+</pre>
+
+    </div>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>

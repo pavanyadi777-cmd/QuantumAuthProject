@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML-DSA (Dilithium) Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>✍️ ML-DSA (Dilithium) Demonstration</h1>
+
+    <hr>
+
+    <h2>Algorithm Information</h2>
+
+    <p><b>Algorithm:</b> ML-DSA-44</p>
+    <p><b>Purpose:</b> Quantum-Safe Digital Signatures</p>
+
+    <hr>
+
+    <h2>Demo Results</h2>
+
+    <div class="card">
+
+        <p><b>Message:</b> {{ message }}</p>
+
+        <p><b>Public Key Size:</b> {{ public_key_size }} bytes</p>
+
+        <p><b>Signature Size:</b> {{ signature_size }} bytes</p>
+
+        <p><b>Signing Time:</b> {{ sign_time }} sec</p>
+
+        <h3>{{ result }}</h3>
+
+    </div>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>

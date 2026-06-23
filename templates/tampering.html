@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tampering Detection Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚨 Tampering Detection Demonstration</h1>
+
+    <hr>
+
+    <h2>Original Message</h2>
+
+    <div class="card">
+        <p>{{ original_message }}</p>
+    </div>
+
+    <h2>Modified Message</h2>
+
+    <div class="card">
+        <p>{{ tampered_message }}</p>
+    </div>
+
+    <h2>Verification Result</h2>
+
+    <div class="card">
+        <h3>{{ result }}</h3>
+    </div>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>
